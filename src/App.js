@@ -1,8 +1,13 @@
 import React from "react";
+import CVForm from "./components/CVForm";
 
-const App = () => {
-  return <div></div>;
-};
+function App() {
+  return (
+    <div>
+      <CVForm />
+    </div>
+  );
+}
 
 export default App;
 
