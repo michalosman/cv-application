@@ -4,18 +4,18 @@ import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <StyledFooter>
+    <FooterWrapper>
       <Copyright>Copyright © 2021 michalosman</Copyright>
       <Link href="https://github.com/michalosman" target="_blank">
         <FaGithub />
       </Link>
-    </StyledFooter>
+    </FooterWrapper>
   );
 };
 
 export default Footer;
 
-const StyledFooter = styled.footer`
+const FooterWrapper = styled.footer`
   position: absolute;
   bottom: 0;
   left: 0;
@@ -38,6 +38,6 @@ const Link = styled.a`
   color: ${({ theme }) => theme.colors.light};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.lightHover};
+    color: ${({ theme }) => theme.colors.lightDark};
   }
 `;

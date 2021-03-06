@@ -4,18 +4,18 @@ import { FaFileInvoice } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <StyledHeader>
+    <HeaderWrapper>
       <Logo>
         <FaFileInvoice />
       </Logo>
       <AppName>CV Creator</AppName>
-    </StyledHeader>
+    </HeaderWrapper>
   );
 };
 
 export default Header;
 
-const StyledHeader = styled.header`
+const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   padding: 2rem;

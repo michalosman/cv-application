@@ -12,12 +12,14 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
     line-height: 1.6;
+    position: relative;
+    min-height: 100%;
   }
 
   body {
     font-family: "Nunito", sans-serif;
     font-size: 1.6rem;
-    background-color: ${({ theme }) => theme.colors.light};
+    background-color: ${({ theme }) => theme.colors.lightDark};
     color: ${({ theme }) => theme.colors.dark};
   }
 
@@ -45,6 +47,7 @@ const GlobalStyle = createGlobalStyle`
 
   button,
   input {
+    border: none;
     outline: none;
     color: inherit;
     font-family: inherit;
