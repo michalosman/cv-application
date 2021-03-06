@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Nunito", sans-serif;
     font-size: 1.6rem;
-    background-color: ${({ theme }) => theme.colors.lightDark};
+    background-color: ${({ theme }) => theme.colors.darkLight};
     color: ${({ theme }) => theme.colors.dark};
   }
 

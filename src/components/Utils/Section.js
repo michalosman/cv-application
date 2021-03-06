@@ -13,11 +13,11 @@ const Section = (props) => {
 const SectionWrapper = styled.section`
   display: grid;
   grid-gap: 0.5rem;
-  padding: 2rem;
+  margin-bottom: 3rem;
 `;
 
 const Title = styled.h2`
-  margin-bottom: 1rem;
+  padding: 0.5rem;
 `;
 
 export default Section;

@@ -8,17 +8,12 @@ const Main = () => {
     <MainWrapper>
       <CVForm />
       <CVResult />
-      <Button>Generate PDF</Button>
     </MainWrapper>
   );
 };
 
 const MainWrapper = styled.main`
-  padding: 2rem;
-`;
-
-const Button = styled.button`
-  margin: 1rem;
+  padding: 4rem;
 `;
 
 export default Main;

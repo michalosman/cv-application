@@ -1,9 +1,10 @@
 export const Theme = {
   colors: {
     light: "#eee",
-    lightDark: "#ccc",
-    dark: "#222",
-    blue: "#10008a",
+    darkLight: "#ccc",
+    dark: "#333",
+    lightDark: "#111",
+    blue: "#038cfc",
   },
 };
 
