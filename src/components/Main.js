@@ -14,6 +14,7 @@ const Main = () => {
 
 const MainWrapper = styled.main`
   padding: 4rem;
+  margin-bottom: 5rem;
 `;
 
 export default Main;

@@ -8,7 +8,7 @@ const Header = () => {
       <Logo>
         <FaFileInvoice />
       </Logo>
-      <AppName>CV Creator</AppName>
+      <h1>CV Creator</h1>
     </HeaderWrapper>
   );
 };
@@ -27,8 +27,4 @@ const Logo = styled.div`
   display: flex;
   margin-right: 1rem;
   font-size: 4rem;
-`;
-
-const AppName = styled.h1`
-  font-family: "Montserrat", sans-serif;
 `;

@@ -13,7 +13,11 @@ const ButtonWrapper = styled.button`
   font-weight: bold;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.lightDark};
+    background-color: ${({ theme }) => theme.colors.darkHover};
+  }
+
+  &:active {
+    background-color: ${({ theme }) => theme.colors.darkActive};
   }
 `;
 

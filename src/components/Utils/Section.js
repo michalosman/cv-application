@@ -11,9 +11,9 @@ const Section = (props) => {
 };
 
 const SectionWrapper = styled.section`
-  display: grid;
-  grid-gap: 0.5rem;
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 `;
 
 const Title = styled.h2`

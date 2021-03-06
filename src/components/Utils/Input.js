@@ -11,7 +11,7 @@ const InputWrapper = styled.input`
   border: 1px solid transparent;
 
   &:focus {
-    border: 1px solid ${({ theme }) => theme.colors.dark};
+    border: 1px solid ${({ theme }) => theme.colors.lightActive};
   }
 `;
 

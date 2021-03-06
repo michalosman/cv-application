@@ -19,6 +19,7 @@ const CVForm = () => {
 const CVFormWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 3rem;
   max-width: 800px;
   padding: 2rem;
   border-radius: 5px;

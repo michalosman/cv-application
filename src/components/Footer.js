@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <FooterWrapper>
-      <Copyright>Copyright © 2021 michalosman</Copyright>
+      <p>Copyright © 2021 michalosman</p>
       <Link href="https://github.com/michalosman" target="_blank">
         <FaGithub />
       </Link>
@@ -28,16 +28,18 @@ const FooterWrapper = styled.footer`
   color: ${({ theme }) => theme.colors.light};
 `;
 
-const Copyright = styled.p`
-  margin-right: 1rem;
-`;
-
 const Link = styled.a`
   position: relative;
   top: 0.2rem;
+  margin-left: 1rem;
   color: ${({ theme }) => theme.colors.light};
+  font-size: 2rem;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.darkLight};
+    color: ${({ theme }) => theme.colors.lightHover};
+  }
+
+  &:active {
+    color: ${({ theme }) => theme.colors.lightActive};
   }
 `;
