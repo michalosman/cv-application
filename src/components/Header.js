@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaFileInvoice } from "react-icons/fa";
 
-function Header() {
+const Header = () => {
   return (
     <StyledHeader>
       <Logo>
@@ -11,7 +11,7 @@ function Header() {
       <Title>CV Creator</Title>
     </StyledHeader>
   );
-}
+};
 
 const StyledHeader = styled.header`
   display: flex;

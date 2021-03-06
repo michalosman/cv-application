@@ -1,6 +1,6 @@
 import React from "react";
 
-function Experience() {
+const Experience = () => {
   return (
     <form>
       <input type="text" name="" placeholder="Company" />
@@ -10,6 +10,6 @@ function Experience() {
       <input type="text" name="" placeholder="To" />
     </form>
   );
-}
+};
 
 export default Experience;

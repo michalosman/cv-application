@@ -1,6 +1,6 @@
 import React from "react";
 
-function Education() {
+const Education = () => {
   return (
     <form>
       <input type="text" name="" placeholder="University name" />
@@ -11,6 +11,6 @@ function Education() {
       <input type="text" name="" placeholder="To" />
     </form>
   );
-}
+};
 
 export default Education;
