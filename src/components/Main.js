@@ -1,5 +1,5 @@
 import React from "react";
-import CVForm from "./CVForm";
+import CVForm from "./CV/CVForm";
 
 const Main = () => {
   return (
