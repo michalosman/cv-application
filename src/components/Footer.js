@@ -22,8 +22,8 @@ const FooterWrapper = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
   width: 100%;
+  padding: 0.5rem;
   background-color: ${({ theme }) => theme.colors.dark};
   color: ${({ theme }) => theme.colors.light};
 `;

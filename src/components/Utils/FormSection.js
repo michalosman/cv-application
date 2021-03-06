@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-const Section = (props) => {
+const FormSection = (props) => {
   return (
-    <SectionWrapper>
+    <FormSectionWrapper>
       <Title>{props.title}</Title>
       {props.children}
-    </SectionWrapper>
+    </FormSectionWrapper>
   );
 };
 
-const SectionWrapper = styled.section`
+const FormSectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -20,4 +20,4 @@ const Title = styled.h2`
   padding: 0.5rem;
 `;
 
-export default Section;
+export default FormSection;
