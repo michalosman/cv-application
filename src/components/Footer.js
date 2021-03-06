@@ -38,6 +38,6 @@ const Link = styled.a`
   color: ${({ theme }) => theme.colors.light};
 
   &:hover {
-    color: ${({ theme }) => theme.colors.lightDark};
+    color: ${({ theme }) => theme.colors.darkLight};
   }
 `;
