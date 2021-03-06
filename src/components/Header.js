@@ -1,23 +1,33 @@
 import React from "react";
 import styled from "styled-components";
-import { FaBriefcase } from "react-icons/fa";
+import { FaFileInvoice } from "react-icons/fa";
 
 function Header() {
   return (
-    <HeaderStyled>
+    <StyledHeader>
       <Logo>
-        <FaBriefcase />
+        <FaFileInvoice />
       </Logo>
       <Title>CV Creator</Title>
-    </HeaderStyled>
+    </StyledHeader>
   );
 }
 
-const HeaderStyled = styled.header`
+const StyledHeader = styled.header`
   display: flex;
-  font-size: 2rem;
+  align-items: center;
+  padding: 2rem;
+  background-color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.light};
 `;
-const Logo = styled.div``;
-const Title = styled.h1``;
+const Logo = styled.div`
+  display: flex;
+  font-size: 4rem;
+  margin-right: 2rem;
+`;
+
+const Title = styled.h1`
+  font-family: "Montserrat", sans-serif;
+`;
 
 export default Header;
