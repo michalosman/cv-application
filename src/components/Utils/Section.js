@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const FormSection = (props) => {
+const Section = (props) => {
   return (
-    <FormSectionWrapper>
+    <SectionWrapper>
       <Title>{props.title}</Title>
       {props.children}
-    </FormSectionWrapper>
+    </SectionWrapper>
   );
 };
 
-const FormSectionWrapper = styled.section`
+const SectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 `;
 
-const Title = styled.h2`
+const Title = styled.h3`
   padding: 0.5rem;
 `;
 
-export default FormSection;
+export default Section;

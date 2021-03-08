@@ -1,13 +1,14 @@
 export const Theme = {
   colors: {
-    darkLight: "#ccc",
+    background: "#ccc",
     light: "#eee",
     lightHover: "#ccc",
     lightActive: "#aaa",
+    lightSecondary: "#ddd",
     dark: "#333",
     darkHover: "#222",
     darkActive: "#111",
-    blue: "#038cfc",
+    blue: "#143E72",
   },
 };
 
