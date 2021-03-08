@@ -16,6 +16,7 @@ const CVResult = () => {
 
 const CVResultWrapper = styled.div`
   min-width: 700px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 
 export default CVResult;

@@ -5,6 +5,7 @@ export const Theme = {
     lightHover: "#ccc",
     lightActive: "#aaa",
     lightSecondary: "#ddd",
+    lightBorder: "#ccc",
     dark: "#333",
     darkHover: "#222",
     darkActive: "#111",

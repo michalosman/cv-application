@@ -8,15 +8,15 @@ const CVMain = () => {
     <CVMainWrapper>
       <Content>
         <Description></Description>
-        <Section title="Experience"></Section>
-        <Section title="Education"></Section>
+        <Section title="Experience" contrastTitle></Section>
+        <Section title="Education" contrastTitle></Section>
       </Content>
       <Sidebar>
         <Photo></Photo>
-        <Section title="Personal Info">
-          <Subsection title="Address"></Subsection>
-          <Subsection title="Phone Number"></Subsection>
-          <Subsection title="Email"></Subsection>
+        <Section title="Personal Info" contrastTitle>
+          <Subsection title="Address">Example street 20</Subsection>
+          <Subsection title="Phone Number">123456789</Subsection>
+          <Subsection title="Email">mail@gmail.com</Subsection>
         </Section>
       </Sidebar>
     </CVMainWrapper>

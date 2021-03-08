@@ -4,7 +4,7 @@ import Section from "../Utils/Section";
 
 const Education = () => {
   return (
-    <Section title="Education">
+    <Section title="Education" titlePadding="0.5rem">
       <Input type="text" name="" placeholder="University name" />
       <Input type="text" name="" placeholder="City" />
       <Input type="text" name="" placeholder="Degree" />

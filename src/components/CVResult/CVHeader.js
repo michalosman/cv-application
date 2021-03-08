@@ -4,8 +4,8 @@ import styled from "styled-components";
 const CVHeader = () => {
   return (
     <CVHeaderWrapper>
-      <h1>Jan Tomczyk</h1>
-      <p>Specjalista ds. Marketingu</p>
+      <h1>John Doe</h1>
+      <p>Data engineer</p>
     </CVHeaderWrapper>
   );
 };

@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const Subsection = (props) => {
+const Subsection = ({ title, children, titlePadding }) => {
   return (
-    <SubsectionWrapper>
-      <Title>{props.title}</Title>
-      {props.children}
+    <SubsectionWrapper padding={titlePadding}>
+      <Title>{title}</Title>
+      {children}
     </SubsectionWrapper>
   );
 };
@@ -13,11 +13,11 @@ const Subsection = (props) => {
 const SubsectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  padding: ${(props) => props.padding};
 `;
 
 const Title = styled.h4`
-  padding: 0.5rem;
+  padding: ${(props) => props.padding};
 `;
 
 export default Subsection;

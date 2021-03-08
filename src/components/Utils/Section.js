@@ -1,11 +1,13 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const Section = (props) => {
+const Section = ({ padding, title, children, titlePadding, contrastTitle }) => {
   return (
-    <SectionWrapper>
-      <Title>{props.title}</Title>
-      {props.children}
+    <SectionWrapper padding={padding}>
+      <Title padding={titlePadding} contrast={contrastTitle}>
+        {title}
+      </Title>
+      {children}
     </SectionWrapper>
   );
 };
@@ -13,11 +15,19 @@ const Section = (props) => {
 const SectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+  padding: ${(props) => props.padding};
 `;
 
 const Title = styled.h3`
-  padding: 0.5rem;
+  padding: ${(props) => props.padding};
+
+  ${(props) =>
+    props.contrast &&
+    css`
+      border-bottom: 1px solid ${({ theme }) => theme.colors.lightBorder};
+      color: ${({ theme }) => theme.colors.blue};
+    `}
 `;
 
 export default Section;
