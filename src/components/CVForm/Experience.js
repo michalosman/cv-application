@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "../Utils/Input";
-import FormSection from "../Utils/FormSection";
+import FormSection from "./FormSection";
 
 const Experience = () => {
   return (
