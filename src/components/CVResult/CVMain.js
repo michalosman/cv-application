@@ -2,17 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import Section from "../Utils/Section";
 import Subsection from "../Utils/Subsection";
+import examplePhoto from "../../assets/example_photo.png";
 
 const CVMain = () => {
   return (
     <CVMainWrapper>
       <Content>
-        <Description></Description>
+        <Description>Some description</Description>
         <Section title="Experience" contrastTitle></Section>
         <Section title="Education" contrastTitle></Section>
       </Content>
       <Sidebar>
-        <Photo></Photo>
+        <Photo src={examplePhoto} alt="example" />
         <Section title="Personal Info" contrastTitle>
           <Subsection title="Address">Example street 20</Subsection>
           <Subsection title="Phone Number">123456789</Subsection>
@@ -39,8 +40,12 @@ const Sidebar = styled.div`
   flex: 1;
 `;
 
-const Description = styled.p``;
+const Description = styled.p`
+  margin-bottom: 1rem;
+`;
 
-const Photo = styled.img``;
+const Photo = styled.img`
+  margin-bottom: 2rem;
+`;
 
 export default CVMain;
