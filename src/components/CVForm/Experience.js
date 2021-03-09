@@ -4,7 +4,7 @@ import Section from "../Utils/Section";
 
 const Experience = () => {
   return (
-    <Section title="Experience" titlePadding="0.5rem">
+    <Section title="Experience" titlePadding="0.5rem" direction="column">
       <Input type="text" name="" placeholder="Company" />
       <Input type="text" name="" placeholder="City" />
       <Input type="text" name="" placeholder="Position" />

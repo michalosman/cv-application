@@ -4,7 +4,11 @@ import Section from "../Utils/Section";
 
 const Personal = () => {
   return (
-    <Section title="Personal Information" titlePadding="0.5rem">
+    <Section
+      title="Personal Information"
+      titlePadding="0.5rem"
+      direction="column"
+    >
       <Input type="text" name="" placeholder="First name" />
       <Input type="text" name="" placeholder="Last name" />
       <Input type="text" name="" placeholder="Title" />

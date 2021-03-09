@@ -3,6 +3,8 @@ import styled from "styled-components";
 import CVHeader from "./CVHeader";
 import CVMain from "./CVMain";
 
+//TODO: Change to grid, make Header, Main, Sidebar
+
 const CVResult = () => {
   return (
     <CVResultWrapper>

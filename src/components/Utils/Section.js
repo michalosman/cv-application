@@ -1,9 +1,16 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-const Section = ({ padding, title, children, titlePadding, contrastTitle }) => {
+const Section = ({
+  padding,
+  title,
+  children,
+  titlePadding,
+  contrastTitle,
+  direction,
+}) => {
   return (
-    <SectionWrapper padding={padding}>
+    <SectionWrapper padding={padding} direction={direction}>
       <Title padding={titlePadding} contrast={contrastTitle}>
         {title}
       </Title>
@@ -14,7 +21,7 @@ const Section = ({ padding, title, children, titlePadding, contrastTitle }) => {
 
 const SectionWrapper = styled.section`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) => props.direction === "column" && "column"};
   gap: 1rem;
   padding: ${(props) => props.padding};
 `;
