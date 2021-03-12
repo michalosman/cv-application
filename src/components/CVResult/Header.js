@@ -11,7 +11,7 @@ const CVHeader = () => {
 };
 
 const CVHeaderWrapper = styled.header`
-  grid-column: span 10;
+  grid-column: span 2;
   padding: 2rem;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;

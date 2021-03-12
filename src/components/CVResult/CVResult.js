@@ -16,6 +16,7 @@ const CVResult = () => {
 
 const CVResultWrapper = styled.div`
   display: grid;
+  grid-template-columns: 500px 200px;
   min-width: 700px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;

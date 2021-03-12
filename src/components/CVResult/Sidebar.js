@@ -8,10 +8,10 @@ const Sidebar = () => {
   return (
     <SidebarWrapper>
       <Photo src={examplePhoto} alt="example" />
-      <Section title="Personal Info" contrastTitle direction="column">
+      <Section title="Personal Details" contrastTitle direction="column">
         <Subsection title="Address">Example street 20</Subsection>
         <Subsection title="Phone Number">123456789</Subsection>
-        <Subsection title="Email">mail@gmail.com</Subsection>
+        <Subsection title="Email">example@gmail.com</Subsection>
       </Section>
     </SidebarWrapper>
   );
@@ -20,7 +20,6 @@ const Sidebar = () => {
 export default Sidebar;
 
 const SidebarWrapper = styled.div`
-  grid-column: span 1;
   padding: 1.5rem;
   border-bottom-right-radius: 5px;
   background-color: ${({ theme }) => theme.colors.lightSecondary};

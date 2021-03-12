@@ -16,8 +16,8 @@ const Content = () => {
       <Section title="Education" contrastTitle>
         <Period>From - To</Period>
         <Subsection title="University name, City">
-          <p>Degree: Degree</p>
-          <p>Subject: Subject</p>
+          <p>Degree: ...</p>
+          <p>Subject: ...</p>
         </Subsection>
       </Section>
     </ContentWrapper>
@@ -27,8 +27,6 @@ const Content = () => {
 export default Content;
 
 const ContentWrapper = styled.div`
-  grid-column: span 9;
-  min-height: 870px;
   padding: 2rem;
   border-bottom-left-radius: 5px;
   background-color: ${({ theme }) => theme.colors.light};
@@ -40,4 +38,5 @@ const Description = styled.p`
 
 const Period = styled.div`
   width: 20%;
+  font-weight: bold;
 `;
