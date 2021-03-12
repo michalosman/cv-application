@@ -13,6 +13,8 @@ const CVHeader = () => {
 const CVHeaderWrapper = styled.header`
   grid-column: span 10;
   padding: 2rem;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   background-color: ${({ theme }) => theme.colors.blue};
   color: ${({ theme }) => theme.colors.light};
 `;

@@ -22,8 +22,8 @@ export default Sidebar;
 const SidebarWrapper = styled.div`
   grid-column: span 1;
   padding: 1.5rem;
+  border-bottom-right-radius: 5px;
   background-color: ${({ theme }) => theme.colors.lightSecondary};
-  flex: 1;
 `;
 
 const Photo = styled.img`

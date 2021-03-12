@@ -10,18 +10,18 @@ const Section = ({
   direction,
 }) => {
   return (
-    <SectionWrapper padding={padding} direction={direction}>
+    <SectionWrapper padding={padding}>
       <Title padding={titlePadding} contrast={contrastTitle}>
         {title}
       </Title>
-      {children}
+      <Children direction={direction}>{children}</Children>
     </SectionWrapper>
   );
 };
 
 const SectionWrapper = styled.section`
   display: flex;
-  flex-direction: ${(props) => props.direction === "column" && "column"};
+  flex-direction: column;
   gap: 1rem;
   padding: ${(props) => props.padding};
 `;
@@ -35,6 +35,12 @@ const Title = styled.h3`
       border-bottom: 1px solid ${({ theme }) => theme.colors.lightBorder};
       color: ${({ theme }) => theme.colors.blue};
     `}
+`;
+
+const Children = styled.div`
+  display: flex;
+  flex-direction: ${(props) => props.direction === "column" && "column"};
+  gap: 1rem;
 `;
 
 export default Section;
