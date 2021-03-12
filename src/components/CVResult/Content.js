@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Section from "../Utils/Section";
 
-const Story = () => {
+const Content = () => {
   return (
-    <StoryWrapper>
+    <ContentWrapper>
       <Description>Some description</Description>
       <Section title="Experience" contrastTitle direction="column">
         <Period>2012-10 - today</Period>
@@ -28,13 +28,14 @@ const Story = () => {
           <li>Responsibility 4</li>
         </Responsibilities>
       </Section>
-    </StoryWrapper>
+    </ContentWrapper>
   );
 };
 
-export default Story;
+export default Content;
 
-const StoryWrapper = styled.div`
+const ContentWrapper = styled.div`
+  grid-column: span 9;
   padding: 2rem;
   background-color: ${({ theme }) => theme.colors.light};
   flex: 3;
@@ -43,8 +44,6 @@ const StoryWrapper = styled.div`
 const Description = styled.p`
   margin-bottom: 1rem;
 `;
-
-const StyledSection = styled(Section)``;
 
 const Period = styled.div``;
 

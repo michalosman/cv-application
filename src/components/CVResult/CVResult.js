@@ -1,20 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import CVHeader from "./CVHeader";
-import CVMain from "./CVMain";
-
-//TODO: Change to grid, make Header, Main, Sidebar
+import Header from "./Header";
+import Content from "./Content";
+import Sidebar from "./Sidebar";
 
 const CVResult = () => {
   return (
     <CVResultWrapper>
-      <CVHeader />
-      <CVMain />
+      <Header />
+      <Content />
+      <Sidebar />
     </CVResultWrapper>
   );
 };
 
 const CVResultWrapper = styled.div`
+  display: grid;
   min-width: 700px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;

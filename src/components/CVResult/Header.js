@@ -11,6 +11,7 @@ const CVHeader = () => {
 };
 
 const CVHeaderWrapper = styled.header`
+  grid-column: span 10;
   padding: 2rem;
   background-color: ${({ theme }) => theme.colors.blue};
   color: ${({ theme }) => theme.colors.light};

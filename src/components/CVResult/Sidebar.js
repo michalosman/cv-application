@@ -20,6 +20,7 @@ const Sidebar = () => {
 export default Sidebar;
 
 const SidebarWrapper = styled.div`
+  grid-column: span 1;
   padding: 1.5rem;
   background-color: ${({ theme }) => theme.colors.lightSecondary};
   flex: 1;
