@@ -48,7 +48,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   button,
-  input {
+  input, 
+  textarea {
     border: none;
     outline: none;
     color: inherit;
