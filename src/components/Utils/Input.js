@@ -1,8 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const Input = ({ type, name, placeholder }) => {
-  return <InputWrapper type={type} name={name} placeholder={placeholder} />;
+const Input = ({ type, name, placeholder, onChange }) => {
+  return (
+    <InputWrapper
+      onChange={onChange}
+      type={type}
+      name={name}
+      placeholder={placeholder}
+    />
+  );
 };
 
 const InputWrapper = styled.input`

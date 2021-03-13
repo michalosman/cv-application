@@ -8,8 +8,8 @@ const Main = () => {
   const [cv, setCv] = useState({
     personalInfo: {
       firstName: "John",
-      secondName: "Doe",
-      titleName: "Data engineer",
+      lastName: "Doe",
+      title: "Data engineer",
       photo: examplePhoto,
       address: "Example street 20",
       phoneNumber: "123456789",
@@ -33,13 +33,46 @@ const Main = () => {
     },
   });
 
-  const handleInput = (e) => {
-    console.log(e.value);
+  const handleChangePersonal = (e) => {
+    const { name, value } = e.target;
+    setCv((prevState) => ({
+      ...prevState,
+      personalInfo: {
+        ...prevState.personalInfo,
+        [name]: value,
+      },
+    }));
+  };
+
+  const handleChangeExperience = (e) => {
+    const { name, value } = e.target;
+    setCv((prevState) => ({
+      ...prevState,
+      experience: {
+        ...prevState.experience,
+        [name]: value,
+      },
+    }));
+  };
+
+  const handleChangeEducation = (e) => {
+    const { name, value } = e.target;
+    setCv((prevState) => ({
+      ...prevState,
+      education: {
+        ...prevState.education,
+        [name]: value,
+      },
+    }));
   };
 
   return (
     <MainWrapper>
-      <CVForm onChange={handleInput} />
+      <CVForm
+        onChangePersonal={handleChangePersonal}
+        onChangeExperience={handleChangeExperience}
+        onChangeEducation={handleChangeEducation}
+      />
       <CVResult cv={cv} />
     </MainWrapper>
   );

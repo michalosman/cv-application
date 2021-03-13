@@ -17,7 +17,7 @@ const Content = ({ personalInfo, experience, education }) => {
         </Period>
         <Subsection title={experience.position}>
           <p>
-            {experience.position}, {experience.city}
+            {experience.company}, {experience.city}
           </p>
         </Subsection>
       </Section>

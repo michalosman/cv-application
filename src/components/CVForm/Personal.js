@@ -3,21 +3,61 @@ import Input from "../Utils/Input";
 import Section from "../Utils/Section";
 import TextArea from "../Utils/TextArea";
 
-const Personal = () => {
+const Personal = ({ onChange }) => {
   return (
     <Section
       title="Personal Information"
       titlePadding="0.5rem"
       direction="column"
     >
-      <Input type="text" name="" placeholder="First name" />
-      <Input type="text" name="" placeholder="Last name" />
-      <Input type="text" name="" placeholder="Title" />
-      <Input type="file" name="" placeholder="Photo" aria-label="photo" />
-      <Input type="text" name="" placeholder="Address" />
-      <Input type="text" name="" placeholder="Phone number" />
-      <Input type="text" name="" placeholder="Email" />
-      <TextArea name="" placeholder="Description" />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="firstName"
+        placeholder="First name"
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="lastName"
+        placeholder="Last name"
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="title"
+        placeholder="Title"
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="file"
+        name="photo"
+        placeholder="Photo"
+        aria-label="photo"
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="address"
+        placeholder="Address"
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="phoneNumber"
+        placeholder="Phone number"
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type="text"
+        name="email"
+        placeholder="Email"
+      />
+      <TextArea
+        onChange={(e) => onChange(e)}
+        name="description"
+        placeholder="Description"
+      />
     </Section>
   );
 };

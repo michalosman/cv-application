@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const CVHeader = ({ personalInfo }) => {
-  const { firstName, secondName, titleName } = personalInfo;
+  const { firstName, lastName, title } = personalInfo;
 
   return (
     <CVHeaderWrapper>
       <h1>
-        {firstName} {secondName}
+        {firstName} {lastName}
       </h1>
-      <p>{titleName}</p>
+      <p>{title}</p>
     </CVHeaderWrapper>
   );
 };
