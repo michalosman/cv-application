@@ -14,9 +14,9 @@ const Personal = () => {
       <Input type="text" name="" placeholder="Last name" />
       <Input type="text" name="" placeholder="Title" />
       <Input type="text" name="" placeholder="Photo" />
-      <Input type="text" name="" placeholder="Email" />
-      <Input type="text" name="" placeholder="Phone number" />
       <Input type="text" name="" placeholder="Address" />
+      <Input type="text" name="" placeholder="Phone number" />
+      <Input type="text" name="" placeholder="Email" />
       <TextArea name="" placeholder="Description" />
     </Section>
   );

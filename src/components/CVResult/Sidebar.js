@@ -17,8 +17,6 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
-
 const SidebarWrapper = styled.div`
   padding: 1.5rem;
   border-bottom-right-radius: 5px;
@@ -28,3 +26,5 @@ const SidebarWrapper = styled.div`
 const Photo = styled.img`
   margin-bottom: 2rem;
 `;
+
+export default Sidebar;

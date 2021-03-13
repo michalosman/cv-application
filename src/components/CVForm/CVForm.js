@@ -9,8 +9,8 @@ const CVForm = () => {
   return (
     <CVFormWrapper>
       <Personal />
-      <Education />
       <Experience />
+      <Education />
       <Button text="Generate PDF"></Button>
     </CVFormWrapper>
   );

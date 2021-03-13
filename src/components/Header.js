@@ -13,8 +13,6 @@ const Header = () => {
   );
 };
 
-export default Header;
-
 const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
@@ -28,3 +26,5 @@ const Logo = styled.div`
   margin-right: 1rem;
   font-size: 4rem;
 `;
+
+export default Header;

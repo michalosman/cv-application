@@ -13,8 +13,6 @@ const Footer = () => {
   );
 };
 
-export default Footer;
-
 const FooterWrapper = styled.footer`
   position: absolute;
   bottom: 0;
@@ -43,3 +41,5 @@ const Link = styled.a`
     color: ${({ theme }) => theme.colors.lightActive};
   }
 `;
+
+export default Footer;

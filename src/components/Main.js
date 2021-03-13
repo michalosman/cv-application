@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import CVForm from "./CVForm";
 import CVResult from "./CVResult";
 
 const Main = () => {
+  const [cvData, setCvData] = useState({});
+
   return (
     <MainWrapper>
       <CVForm />

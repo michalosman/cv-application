@@ -24,8 +24,6 @@ const Content = () => {
   );
 };
 
-export default Content;
-
 const ContentWrapper = styled.div`
   padding: 2rem;
   border-bottom-left-radius: 5px;
@@ -40,3 +38,5 @@ const Period = styled.div`
   width: 20%;
   font-weight: bold;
 `;
+
+export default Content;
