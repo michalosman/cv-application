@@ -2,14 +2,45 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import CVForm from "./CVForm";
 import CVResult from "./CVResult";
+import examplePhoto from "../assets/example_photo.png";
 
 const Main = () => {
-  const [cvData, setCvData] = useState({});
+  const [cv, setCv] = useState({
+    personalInfo: {
+      firstName: "John",
+      secondName: "Doe",
+      titleName: "Data engineer",
+      photo: examplePhoto,
+      address: "Example street 20",
+      phoneNumber: "123456789",
+      email: "example@gmail.com",
+      description: "Description",
+    },
+    experience: {
+      position: "Position",
+      company: "Company",
+      city: "City",
+      from: "From",
+      to: "To",
+    },
+    education: {
+      universityName: "University name",
+      city: "City",
+      degree: "...",
+      subject: "...",
+      from: "From",
+      to: "To",
+    },
+  });
+
+  const handleInput = (e) => {
+    console.log(e.value);
+  };
 
   return (
     <MainWrapper>
-      <CVForm />
-      <CVResult />
+      <CVForm onChange={handleInput} />
+      <CVResult cv={cv} />
     </MainWrapper>
   );
 };

@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const CVHeader = () => {
+const CVHeader = ({ personalInfo }) => {
+  const { firstName, secondName, titleName } = personalInfo;
+
   return (
     <CVHeaderWrapper>
-      <h1>John Doe</h1>
-      <p>Data engineer</p>
+      <h1>
+        {firstName} {secondName}
+      </h1>
+      <p>{titleName}</p>
     </CVHeaderWrapper>
   );
 };

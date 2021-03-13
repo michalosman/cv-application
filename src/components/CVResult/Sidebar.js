@@ -2,16 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import Section from "../Utils/Section";
 import Subsection from "../Utils/Subsection";
-import examplePhoto from "../../assets/example_photo.png";
 
-const Sidebar = () => {
+const Sidebar = ({ personalInfo }) => {
   return (
     <SidebarWrapper>
-      <Photo src={examplePhoto} alt="example" />
+      <Photo src={personalInfo.photo} alt="example" />
       <Section title="Personal Details" contrastTitle direction="column">
-        <Subsection title="Address">Example street 20</Subsection>
-        <Subsection title="Phone Number">123456789</Subsection>
-        <Subsection title="Email">example@gmail.com</Subsection>
+        <Subsection title="Address">{personalInfo.address}</Subsection>
+        <Subsection title="Phone Number">{personalInfo.phoneNumber}</Subsection>
+        <Subsection title="Email">{personalInfo.email}</Subsection>
       </Section>
     </SidebarWrapper>
   );

@@ -5,10 +5,10 @@ import Education from "./Education";
 import Experience from "./Experience";
 import Button from "../Utils/Button";
 
-const CVForm = () => {
+const CVForm = ({ onChange }) => {
   return (
     <CVFormWrapper>
-      <Personal />
+      <Personal onChange={onChange} />
       <Experience />
       <Education />
       <Button text="Generate PDF"></Button>
