@@ -2,6 +2,7 @@ import React from "react";
 import Input from "../Utils/Input";
 import Section from "../Utils/Section";
 import TextArea from "../Utils/TextArea";
+import FileInput from "../Utils/FileInput";
 
 const Personal = ({ onChange }) => {
   return (
@@ -28,13 +29,7 @@ const Personal = ({ onChange }) => {
         name="title"
         placeholder="Title"
       />
-      <Input
-        onChange={(e) => onChange(e)}
-        type="file"
-        name="photo"
-        placeholder="Photo"
-        aria-label="photo"
-      />
+      <FileInput onChange={(e) => onChange(e)} name="photo" label="Photo" />
       <Input
         onChange={(e) => onChange(e)}
         type="text"

@@ -2,39 +2,19 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import CVForm from "./CVForm";
 import CVResult from "./CVResult";
-import examplePhoto from "../assets/example_photo.png";
+import exampleCV from "./Utils/exampleCV";
 
 const Main = () => {
-  const [cv, setCv] = useState({
-    personalInfo: {
-      firstName: "John",
-      lastName: "Doe",
-      title: "Data engineer",
-      photo: examplePhoto,
-      address: "Example street 20",
-      phoneNumber: "123456789",
-      email: "example@gmail.com",
-      description: "Description",
-    },
-    experience: {
-      position: "Position",
-      company: "Company",
-      city: "City",
-      from: "From",
-      to: "To",
-    },
-    education: {
-      universityName: "University name",
-      city: "City",
-      degree: "...",
-      subject: "...",
-      from: "From",
-      to: "To",
-    },
-  });
+  const [cv, setCv] = useState(exampleCV);
 
   const handleChangePersonal = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type } = e.target;
+
+    if (type === "file") {
+      handleChangePhoto(e);
+      return;
+    }
+
     setCv((prevState) => ({
       ...prevState,
       personalInfo: {
@@ -42,6 +22,25 @@ const Main = () => {
         [name]: value,
       },
     }));
+  };
+
+  const handleChangePhoto = (e) => {
+    const { name } = e.target;
+    const photo = e.target.files[0];
+    if (!photo) return;
+
+    const reader = new FileReader();
+    reader.readAsDataURL(photo);
+
+    reader.onload = () => {
+      setCv((prevState) => ({
+        ...prevState,
+        personalInfo: {
+          ...prevState.personalInfo,
+          [name]: reader.result,
+        },
+      }));
+    };
   };
 
   const handleChangeExperience = (e) => {
@@ -85,7 +84,6 @@ const MainWrapper = styled.main`
   gap: 6rem;
   padding: 5rem;
   margin-bottom: 4rem;
-
   @media (max-width: 1600px) {
     flex-direction: column;
     align-items: center;
