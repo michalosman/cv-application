@@ -4,6 +4,13 @@ import CVForm from "./CVForm";
 import CVResult from "./CVResult";
 import exampleCV from "./Utils/exampleCV";
 
+//TODO
+//Enable adding multiple Experience and Education fields
+//Change education/experience object to array
+//map while rendering, uuid
+//generating PDF
+//validation
+
 const Main = () => {
   const [cv, setCv] = useState(exampleCV);
 
@@ -11,7 +18,7 @@ const Main = () => {
     const { name, value, type } = e.target;
 
     if (type === "file") {
-      handleChangePhoto(e);
+      handleChangeFile(e);
       return;
     }
 
@@ -24,14 +31,12 @@ const Main = () => {
     }));
   };
 
-  const handleChangePhoto = (e) => {
+  const handleChangeFile = (e) => {
     const { name } = e.target;
-    const photo = e.target.files[0];
-    if (!photo) return;
+    const file = e.target.files[0];
+    if (!file) return;
 
     const reader = new FileReader();
-    reader.readAsDataURL(photo);
-
     reader.onload = () => {
       setCv((prevState) => ({
         ...prevState,
@@ -41,6 +46,7 @@ const Main = () => {
         },
       }));
     };
+    reader.readAsDataURL(file);
   };
 
   const handleChangeExperience = (e) => {

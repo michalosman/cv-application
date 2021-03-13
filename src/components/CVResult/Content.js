@@ -3,10 +3,6 @@ import styled from "styled-components";
 import Section from "../Utils/Section";
 import Subsection from "../Utils/Subsection";
 
-// TODO
-//* Change education/experience object to array
-//* Add many experience and education objects after basic implementation (map)
-
 const Content = ({ personalInfo, experience, education }) => {
   return (
     <ContentWrapper>
