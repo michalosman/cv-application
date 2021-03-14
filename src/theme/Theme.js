@@ -10,6 +10,9 @@ export const Theme = {
     darkHover: "#222",
     darkActive: "#111",
     blue: "#143E72",
+    primary: "#1ba148",
+    primaryHover: "#0a9037",
+    primaryActive: "#098026",
   },
 };
 

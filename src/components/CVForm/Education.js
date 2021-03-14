@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "../Utils/Input";
 import Section from "../Utils/Section";
+import Button from "../Utils/Button";
 
 const Education = ({ onChange }) => {
   return (
@@ -41,6 +42,7 @@ const Education = ({ onChange }) => {
         name="to"
         placeholder="To"
       />
+      <Button text="Add"></Button>
     </Section>
   );
 };

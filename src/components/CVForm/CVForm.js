@@ -15,7 +15,7 @@ const CVForm = ({
       <Personal onChange={onChangePersonal} />
       <Experience onChange={onChangeExperience} />
       <Education onChange={onChangeEducation} />
-      <Button text="Generate PDF"></Button>
+      <Button text="Generate PDF" primary></Button>
     </CVFormWrapper>
   );
 };
