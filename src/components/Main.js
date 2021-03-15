@@ -4,6 +4,7 @@ import CVForm from "./CVForm";
 import CVResult from "./CVResult";
 import exampleCV from "./Utils/exampleCV";
 import emptyCV from "./Utils/emptyCV";
+import { v4 as uuidv4 } from "uuid";
 
 //TODO
 //Enable adding multiple Experience and Education fields
@@ -72,9 +73,40 @@ const Main = () => {
     }));
   };
 
-  const handleAddExperience = (e) => {};
+  const handleAddExperience = (e) => {
+    setCv((prevState) => ({
+      ...prevState,
+      experience: [
+        ...prevState.experience,
+        {
+          id: uuidv4(),
+          position: "",
+          company: "",
+          city: "",
+          from: "",
+          to: "",
+        },
+      ],
+    }));
+  };
   const handleDeleteExperience = (e) => {};
-  const handleAddEducation = (e) => {};
+  const handleAddEducation = (e) => {
+    setCv((prevState) => ({
+      ...prevState,
+      education: [
+        ...prevState.education,
+        {
+          id: uuidv4(),
+          universityName: "",
+          city: "",
+          degree: "",
+          subject: "",
+          from: "",
+          to: "",
+        },
+      ],
+    }));
+  };
   const handleDeleteEducation = (e) => {};
 
   return (

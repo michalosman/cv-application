@@ -2,31 +2,26 @@ import React from "react";
 import styled from "styled-components";
 import Section from "../Utils/Section";
 import Subsection from "../Utils/Subsection";
+import ExperienceItem from "./ExperienceItem";
+import EducationItem from "./EducationItem";
 
 const Content = ({ personalInfo, experience, education }) => {
+  const experienceItems = experience.map((experienceItem) => (
+    <ExperienceItem key={experienceItem.id} experienceItem={experienceItem} />
+  ));
+
+  const educationItems = education.map((educationItem) => (
+    <EducationItem key={educationItem.id} educationItem={educationItem} />
+  ));
+
   return (
     <ContentWrapper>
       <Description>{personalInfo.description}</Description>
       <Section title="Experience" contrastTitle>
-        {/* For each */}
-        <Period>
-          {experience.from} - {experience.to}
-        </Period>
-        <Subsection title={experience.position}>
-          <p>
-            {experience.company}, {experience.city}
-          </p>
-        </Subsection>
+        {experienceItems}
       </Section>
       <Section title="Education" contrastTitle>
-        {/* For each */}
-        <Period>
-          {education.from} - {education.to}
-        </Period>
-        <Subsection title={`${education.universityName}, ${education.city}`}>
-          <p>Degree: {education.degree}</p>
-          <p>Subject: {education.subject}</p>
-        </Subsection>
+        {educationItems}
       </Section>
     </ContentWrapper>
   );
@@ -40,11 +35,6 @@ const ContentWrapper = styled.div`
 
 const Description = styled.p`
   margin-bottom: 1rem;
-`;
-
-const Period = styled.div`
-  width: 20%;
-  font-weight: bold;
 `;
 
 export default Content;

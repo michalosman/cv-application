@@ -13,7 +13,7 @@ const exampleCV = {
   },
   experience: [
     {
-      // id: uuidv4(),
+      id: uuidv4(),
       position: "",
       company: "",
       city: "",
@@ -23,7 +23,7 @@ const exampleCV = {
   ],
   education: [
     {
-      // id: uuidv4(),
+      id: uuidv4(),
       universityName: "",
       city: "",
       degree: "",

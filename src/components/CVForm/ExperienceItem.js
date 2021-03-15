@@ -2,7 +2,7 @@ import React from "react";
 import Input from "../Utils/Input";
 import Button from "../Utils/Button";
 
-const ExperienceItem = ({ key, experienceItem, onChange, onDelete }) => {
+const ExperienceItem = ({ experienceItem, onChange, onDelete }) => {
   return (
     <>
       <Input

@@ -4,7 +4,7 @@ import Button from "../Utils/Button";
 import ExperienceItem from "./ExperienceItem";
 
 const Experience = ({ experience, onChange, onAdd, onDelete }) => {
-  const experiences = experience.map((experienceItem) => (
+  const experienceItems = experience.map((experienceItem) => (
     <ExperienceItem
       key={experienceItem.id}
       experienceItem={experienceItem}
@@ -15,7 +15,7 @@ const Experience = ({ experience, onChange, onAdd, onDelete }) => {
 
   return (
     <Section title="Experience" titlePadding="0.5rem" direction="column">
-      {experiences}
+      {experienceItems}
       <Button text="Add" onClick={onAdd}></Button>
     </Section>
   );
