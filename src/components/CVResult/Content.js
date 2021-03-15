@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Section from "../Utils/Section";
-import Subsection from "../Utils/Subsection";
 import ExperienceItem from "./ExperienceItem";
 import EducationItem from "./EducationItem";
 

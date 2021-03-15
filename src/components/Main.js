@@ -3,13 +3,11 @@ import styled from "styled-components";
 import CVForm from "./CVForm";
 import CVResult from "./CVResult";
 import exampleCV from "./Utils/exampleCV";
-import emptyCV from "./Utils/emptyCV";
+// import emptyCV from "./Utils/emptyCV";
 import { v4 as uuidv4 } from "uuid";
 
 //TODO
-//Enable adding multiple Experience and Education fields
-//Change education/experience object to array
-//map while rendering, uuid
+//finish adding and deleting experience & education items
 //generating PDF
 //validation
 
@@ -51,15 +49,16 @@ const Main = () => {
     reader.readAsDataURL(file);
   };
 
-  const handleChangeExperience = (e) => {
+  const handleChangeExperience = (e, id) => {
     const { name, value } = e.target;
-    setCv((prevState) => ({
-      ...prevState,
-      experience: {
-        ...prevState.experience,
-        [name]: value,
-      },
-    }));
+    console.log(id);
+    // setCv((prevState) => ({
+    //   ...prevState,
+    //   experience: {
+    //     ...prevState.experience,
+    //     [name]: value,
+    //   },
+    // }));
   };
 
   const handleChangeEducation = (e) => {
@@ -89,7 +88,11 @@ const Main = () => {
       ],
     }));
   };
-  const handleDeleteExperience = (e) => {};
+
+  const handleDeleteExperience = (id) => {
+    console.log(id);
+  };
+
   const handleAddEducation = (e) => {
     setCv((prevState) => ({
       ...prevState,

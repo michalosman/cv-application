@@ -11,7 +11,6 @@ const Personal = ({ personalInfo, onChange }) => {
       titlePadding="0.5rem"
       direction="column"
     >
-      {personalInfo.firstName}
       <Input
         onChange={(e) => onChange(e)}
         type="text"
