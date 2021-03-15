@@ -8,6 +8,7 @@ const Content = ({ personalInfo, experience, education }) => {
     <ContentWrapper>
       <Description>{personalInfo.description}</Description>
       <Section title="Experience" contrastTitle>
+        {/* For each */}
         <Period>
           {experience.from} - {experience.to}
         </Period>
@@ -18,6 +19,7 @@ const Content = ({ personalInfo, experience, education }) => {
         </Subsection>
       </Section>
       <Section title="Education" contrastTitle>
+        {/* For each */}
         <Period>
           {education.from} - {education.to}
         </Period>

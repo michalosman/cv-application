@@ -3,6 +3,7 @@ import styled from "styled-components";
 import CVForm from "./CVForm";
 import CVResult from "./CVResult";
 import exampleCV from "./Utils/exampleCV";
+import emptyCV from "./Utils/emptyCV";
 
 //TODO
 //Enable adding multiple Experience and Education fields
@@ -71,12 +72,22 @@ const Main = () => {
     }));
   };
 
+  const handleAddExperience = (e) => {};
+  const handleDeleteExperience = (e) => {};
+  const handleAddEducation = (e) => {};
+  const handleDeleteEducation = (e) => {};
+
   return (
     <MainWrapper>
       <CVForm
+        cv={cv}
         onChangePersonal={handleChangePersonal}
         onChangeExperience={handleChangeExperience}
+        onAddExperience={handleAddExperience}
+        onDeleteExperience={handleDeleteExperience}
         onChangeEducation={handleChangeEducation}
+        onAddEducation={handleAddEducation}
+        onDeleteEducation={handleDeleteEducation}
       />
       <CVResult cv={cv} />
     </MainWrapper>

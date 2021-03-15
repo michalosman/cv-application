@@ -1,4 +1,5 @@
 import examplePhoto from "../../assets/example_photo.png";
+import { v4 as uuidv4 } from "uuid";
 
 const exampleCV = {
   personalInfo: {
@@ -11,21 +12,27 @@ const exampleCV = {
     email: "example@gmail.com",
     description: "Description",
   },
-  experience: {
-    position: "Position",
-    company: "Company",
-    city: "City",
-    from: "From",
-    to: "To",
-  },
-  education: {
-    universityName: "University name",
-    city: "City",
-    degree: "...",
-    subject: "...",
-    from: "From",
-    to: "To",
-  },
+  experience: [
+    {
+      // id: uuidv4(),
+      position: "Position",
+      company: "Company",
+      city: "City",
+      from: "From",
+      to: "To",
+    },
+  ],
+  education: [
+    {
+      // id: uuidv4(),
+      universityName: "University name",
+      city: "City",
+      degree: "...",
+      subject: "...",
+      from: "From",
+      to: "To",
+    },
+  ],
 };
 
 export default exampleCV;
