@@ -3,14 +3,17 @@ import styled from "styled-components";
 import CVForm from "./CVForm";
 import CVResult from "./CVResult";
 import { v4 as uuidv4 } from "uuid";
-// import exampleCV from "./Utils/exampleCV";
+import exampleCV from "./Utils/exampleCV";
 import emptyCV from "./Utils/emptyCV";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 //TODO
-//generating PDF
+//fix generating PDF
+//try other solutions from bookmarks
 
 const Main = () => {
-  const [cv, setCv] = useState(emptyCV);
+  const [cv, setCv] = useState(exampleCV);
 
   const handleChangePersonal = (e) => {
     const { name, value, type } = e.target;
@@ -118,12 +121,24 @@ const Main = () => {
       ],
     }));
   };
+
   const handleDeleteEducation = (id) => {
     setCv((prevState) => {
       const newEducation = prevState.education.filter(
         (educationItem) => educationItem.id !== id
       );
       return { ...prevState, education: [...newEducation] };
+    });
+  };
+
+  const handlePrint = () => {
+    const input = document.getElementById("divToPrint");
+    console.log(input);
+    html2canvas(input).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF();
+      pdf.addImage(imgData, "JPEG", 0, 0);
+      pdf.save("cv.pdf");
     });
   };
 
@@ -138,6 +153,7 @@ const Main = () => {
         onChangeEducation={handleChangeEducation}
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
+        onPrint={handlePrint}
       />
       <CVResult cv={cv} />
     </MainWrapper>
