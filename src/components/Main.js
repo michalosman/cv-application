@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import CVForm from "./CVForm";
 import CVResult from "./CVResult";
+import { v4 as uuidv4 } from "uuid";
 import exampleCV from "./Utils/exampleCV";
 // import emptyCV from "./Utils/emptyCV";
-import { v4 as uuidv4 } from "uuid";
 
 //TODO
 //finish adding and deleting experience & education items
@@ -51,25 +51,33 @@ const Main = () => {
 
   const handleChangeExperience = (e, id) => {
     const { name, value } = e.target;
-    console.log(id);
-    // setCv((prevState) => ({
-    //   ...prevState,
-    //   experience: {
-    //     ...prevState.experience,
-    //     [name]: value,
-    //   },
-    // }));
+    const index = cv.experience.findIndex(
+      (experienceItem) => experienceItem.id === id
+    );
+    // TODO Refactor
+    setCv((prevState) => {
+      return {
+        ...prevState,
+        ...prevState.experience.map((experienceItem) => {
+          if (experienceItem.id === id) {
+            return { ...experienceItem, ...(experienceItem[name] = value) };
+          }
+        }),
+      };
+    });
   };
+
+  const getExperienceById = (array, id) => {};
 
   const handleChangeEducation = (e) => {
     const { name, value } = e.target;
-    setCv((prevState) => ({
-      ...prevState,
-      education: {
-        ...prevState.education,
-        [name]: value,
-      },
-    }));
+    // setCv((prevState) => ({
+    //   ...prevState,
+    //   education: {
+    //     ...prevState.education,
+    //     [name]: value,
+    //   },
+    // }));
   };
 
   const handleAddExperience = (e) => {
