@@ -15,11 +15,13 @@ const Content = ({ personalInfo, experience, education }) => {
 
   return (
     <ContentWrapper>
-      <Description>{personalInfo.description}</Description>
-      <Section title="Experience" contrastTitle>
+      <Section title="Description" contrastTitle>
+        {personalInfo.description}
+      </Section>
+      <Section title="Experience" direction="column" contrastTitle>
         {experienceItems}
       </Section>
-      <Section title="Education" contrastTitle>
+      <Section title="Education" direction="column" contrastTitle>
         {educationItems}
       </Section>
     </ContentWrapper>
@@ -30,10 +32,6 @@ const ContentWrapper = styled.div`
   padding: 2rem;
   border-bottom-left-radius: 5px;
   background-color: ${({ theme }) => theme.colors.light};
-`;
-
-const Description = styled.p`
-  margin-bottom: 1rem;
 `;
 
 export default Content;

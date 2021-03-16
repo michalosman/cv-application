@@ -4,7 +4,7 @@ import Subsection from "../Utils/Subsection";
 
 const EducationItem = ({ educationItem }) => {
   return (
-    <>
+    <EducationItemWrapper>
       <Period>
         {educationItem.from} - {educationItem.to}
       </Period>
@@ -14,9 +14,13 @@ const EducationItem = ({ educationItem }) => {
         <p>Degree: {educationItem.degree}</p>
         <p>Subject: {educationItem.subject}</p>
       </Subsection>
-    </>
+    </EducationItemWrapper>
   );
 };
+
+const EducationItemWrapper = styled.div`
+  display: flex;
+`;
 
 const Period = styled.div`
   width: 20%;

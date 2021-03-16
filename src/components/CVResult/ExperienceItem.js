@@ -4,7 +4,7 @@ import Subsection from "../Utils/Subsection";
 
 const ExperienceItem = ({ experienceItem }) => {
   return (
-    <>
+    <ExperienceItemWrapper>
       <Period>
         {experienceItem.from} - {experienceItem.to}
       </Period>
@@ -13,9 +13,13 @@ const ExperienceItem = ({ experienceItem }) => {
           {experienceItem.company}, {experienceItem.city}
         </p>
       </Subsection>
-    </>
+    </ExperienceItemWrapper>
   );
 };
+
+const ExperienceItemWrapper = styled.div`
+  display: flex;
+`;
 
 const Period = styled.div`
   width: 20%;
