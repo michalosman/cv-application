@@ -19,6 +19,8 @@ const CVResult = ({ cv }) => {
 };
 
 const CVResultWrapper = styled.div`
+  position: sticky;
+  top: 10px;
   display: grid;
   grid-template-columns: 500px 200px;
   min-width: 700px;

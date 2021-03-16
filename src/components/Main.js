@@ -4,10 +4,9 @@ import CVForm from "./CVForm";
 import CVResult from "./CVResult";
 import { v4 as uuidv4 } from "uuid";
 import exampleCV from "./Utils/exampleCV";
-// import emptyCV from "./Utils/emptyCV";
+import emptyCV from "./Utils/emptyCV";
 
 //TODO
-//finish adding and deleting experience & education items
 //generating PDF
 //validation
 
@@ -63,21 +62,7 @@ const Main = () => {
     });
   };
 
-  const handleChangeEducation = (e, id) => {
-    const { name, value } = e.target;
-
-    setCv((prevState) => {
-      const newEducation = prevState.education.map((educationItem) => {
-        if (educationItem.id === id) {
-          return { ...educationItem, [name]: value };
-        }
-        return educationItem;
-      });
-      return { ...prevState, education: [...newEducation] };
-    });
-  };
-
-  const handleAddExperience = (e) => {
+  const handleAddExperience = () => {
     setCv((prevState) => ({
       ...prevState,
       experience: [
@@ -95,10 +80,29 @@ const Main = () => {
   };
 
   const handleDeleteExperience = (id) => {
-    console.log(id);
+    setCv((prevState) => {
+      const newExperience = prevState.experience.filter(
+        (experienceItem) => experienceItem.id !== id
+      );
+      return { ...prevState, experience: [...newExperience] };
+    });
   };
 
-  const handleAddEducation = (e) => {
+  const handleChangeEducation = (e, id) => {
+    const { name, value } = e.target;
+
+    setCv((prevState) => {
+      const newEducation = prevState.education.map((educationItem) => {
+        if (educationItem.id === id) {
+          return { ...educationItem, [name]: value };
+        }
+        return educationItem;
+      });
+      return { ...prevState, education: [...newEducation] };
+    });
+  };
+
+  const handleAddEducation = () => {
     setCv((prevState) => ({
       ...prevState,
       education: [
@@ -115,7 +119,14 @@ const Main = () => {
       ],
     }));
   };
-  const handleDeleteEducation = (e) => {};
+  const handleDeleteEducation = (id) => {
+    setCv((prevState) => {
+      const newEducation = prevState.education.filter(
+        (educationItem) => educationItem.id !== id
+      );
+      return { ...prevState, education: [...newEducation] };
+    });
+  };
 
   return (
     <MainWrapper>
