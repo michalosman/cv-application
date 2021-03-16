@@ -3,15 +3,14 @@ import styled from "styled-components";
 import CVForm from "./CVForm";
 import CVResult from "./CVResult";
 import { v4 as uuidv4 } from "uuid";
-import exampleCV from "./Utils/exampleCV";
+// import exampleCV from "./Utils/exampleCV";
 import emptyCV from "./Utils/emptyCV";
 
 //TODO
 //generating PDF
-//validation
 
 const Main = () => {
-  const [cv, setCv] = useState(exampleCV);
+  const [cv, setCv] = useState(emptyCV);
 
   const handleChangePersonal = (e) => {
     const { name, value, type } = e.target;
