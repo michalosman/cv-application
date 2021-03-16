@@ -51,33 +51,30 @@ const Main = () => {
 
   const handleChangeExperience = (e, id) => {
     const { name, value } = e.target;
-    const index = cv.experience.findIndex(
-      (experienceItem) => experienceItem.id === id
-    );
-    // TODO Refactor
+
     setCv((prevState) => {
-      return {
-        ...prevState,
-        ...prevState.experience.map((experienceItem) => {
-          if (experienceItem.id === id) {
-            return { ...experienceItem, ...(experienceItem[name] = value) };
-          }
-        }),
-      };
+      const newExperience = prevState.experience.map((experienceItem) => {
+        if (experienceItem.id === id) {
+          return { ...experienceItem, [name]: value };
+        }
+        return experienceItem;
+      });
+      return { ...prevState, experience: [...newExperience] };
     });
   };
 
-  const getExperienceById = (array, id) => {};
-
-  const handleChangeEducation = (e) => {
+  const handleChangeEducation = (e, id) => {
     const { name, value } = e.target;
-    // setCv((prevState) => ({
-    //   ...prevState,
-    //   education: {
-    //     ...prevState.education,
-    //     [name]: value,
-    //   },
-    // }));
+
+    setCv((prevState) => {
+      const newEducation = prevState.education.map((educationItem) => {
+        if (educationItem.id === id) {
+          return { ...educationItem, [name]: value };
+        }
+        return educationItem;
+      });
+      return { ...prevState, education: [...newEducation] };
+    });
   };
 
   const handleAddExperience = (e) => {
