@@ -1,7 +1,7 @@
 import React from "react";
+import EducationItem from "./EducationItem";
 import Section from "../Utils/Section";
 import Button from "../Utils/Button";
-import EducationItem from "./EducationItem";
 
 const Education = ({ education, onChange, onAdd, onDelete }) => {
   const educationItems = education.map((educationItem) => (

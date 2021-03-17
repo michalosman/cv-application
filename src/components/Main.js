@@ -1,11 +1,11 @@
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
+import { v4 as uuidv4 } from "uuid";
+import { useReactToPrint } from "react-to-print";
 import CVForm from "./CVForm";
 import CVPreview from "./CVPreview";
-import { v4 as uuidv4 } from "uuid";
 import exampleCV from "./Utils/exampleCV";
 import emptyCV from "./Utils/emptyCV";
-import { useReactToPrint } from "react-to-print";
 
 const Main = () => {
   const [cv, setCv] = useState(emptyCV);

@@ -1,5 +1,5 @@
-import examplePhoto from "../../assets/example_photo.jpg";
 import { v4 as uuidv4 } from "uuid";
+import examplePhoto from "../../assets/example_photo.jpg";
 
 const exampleCV = {
   personalInfo: {

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Section from "../Utils/Section";
 import ExperienceItem from "./ExperienceItem";
 import EducationItem from "./EducationItem";
+import Section from "../Utils/Section";
 
 const Content = ({ personalInfo, experience, education }) => {
   const experienceItems = experience.map((experienceItem) => (

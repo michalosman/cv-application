@@ -1,7 +1,7 @@
 import React from "react";
+import ExperienceItem from "./ExperienceItem";
 import Section from "../Utils/Section";
 import Button from "../Utils/Button";
-import ExperienceItem from "./ExperienceItem";
 
 const Experience = ({ experience, onChange, onAdd, onDelete }) => {
   const experienceItems = experience.map((experienceItem) => (
