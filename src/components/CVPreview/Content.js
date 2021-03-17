@@ -30,7 +30,6 @@ const Content = ({ personalInfo, experience, education }) => {
 
 const ContentWrapper = styled.div`
   padding: 2rem;
-  border-bottom-left-radius: 5px;
   background-color: ${({ theme }) => theme.colors.light};
 `;
 

@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import CVForm from "./CVForm";
 import CVPreview from "./CVPreview";
 import { v4 as uuidv4 } from "uuid";
 import exampleCV from "./Utils/exampleCV";
 // import emptyCV from "./Utils/emptyCV";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
+import { useReactToPrint } from "react-to-print";
 
 //TODO
 //fix generating PDF
@@ -131,16 +130,8 @@ const Main = () => {
     });
   };
 
-  const handlePrint = () => {
-    const input = document.getElementById("divToPrint");
-    console.log(input);
-    html2canvas(input).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF();
-      pdf.addImage(imgData, "JPEG", 0, 0);
-      pdf.save("cv.pdf");
-    });
-  };
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({ content: () => componentRef.current });
 
   return (
     <MainWrapper>
@@ -155,10 +146,12 @@ const Main = () => {
         onDeleteEducation={handleDeleteEducation}
         onPrint={handlePrint}
       />
-      <CVPreview cv={cv} />
+      <CVPreview cv={cv} ref={componentRef} />
     </MainWrapper>
   );
 };
+
+export default Main;
 
 const MainWrapper = styled.main`
   display: flex;
@@ -173,5 +166,3 @@ const MainWrapper = styled.main`
     gap: 2rem;
   }
 `;
-
-export default Main;

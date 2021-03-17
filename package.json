@@ -7,11 +7,12 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.0",
     "html2canvas": "^1.0.0-rc.7",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
     "react-scripts": "4.0.3",
+    "react-to-print": "^2.12.3",
     "styled-components": "^5.2.1",
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.0"

@@ -17,8 +17,7 @@ const Sidebar = ({ personalInfo }) => {
 };
 
 const SidebarWrapper = styled.div`
-  padding: 1.5rem;
-  border-bottom-right-radius: 5px;
+  padding: 2rem;
   background-color: ${({ theme }) => theme.colors.lightSecondary};
 `;
 
