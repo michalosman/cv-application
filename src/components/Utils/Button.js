@@ -1,9 +1,9 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-const Button = ({ text, onClick, primary }) => {
+const Button = ({ text, onClick, primary, secondary }) => {
   return (
-    <ButtonWrapper onClick={onClick} primary={primary}>
+    <ButtonWrapper onClick={onClick} primary={primary} secondary={secondary}>
       {text}
     </ButtonWrapper>
   );
@@ -37,6 +37,21 @@ const ButtonWrapper = styled.button`
 
       &:active {
         background-color: ${({ theme }) => theme.colors.primaryActive};
+      }
+    `}
+
+  ${(props) =>
+    props.secondary &&
+    css`
+      background-color: ${({ theme }) => theme.colors.secondary};
+      color: ${({ theme }) => theme.colors.light};
+
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.secondaryHover};
+      }
+
+      &:active {
+        background-color: ${({ theme }) => theme.colors.secondaryActive};
       }
     `}
 `;

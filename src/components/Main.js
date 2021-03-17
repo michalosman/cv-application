@@ -4,15 +4,11 @@ import CVForm from "./CVForm";
 import CVPreview from "./CVPreview";
 import { v4 as uuidv4 } from "uuid";
 import exampleCV from "./Utils/exampleCV";
-// import emptyCV from "./Utils/emptyCV";
+import emptyCV from "./Utils/emptyCV";
 import { useReactToPrint } from "react-to-print";
 
-//TODO
-//fix generating PDF
-//try other solutions from bookmarks
-
 const Main = () => {
-  const [cv, setCv] = useState(exampleCV);
+  const [cv, setCv] = useState(emptyCV);
 
   const handleChangePersonal = (e) => {
     const { name, value, type } = e.target;
@@ -130,6 +126,10 @@ const Main = () => {
     });
   };
 
+  const handleLoadExample = () => {
+    setCv(exampleCV);
+  };
+
   const componentRef = useRef();
   const handlePrint = useReactToPrint({ content: () => componentRef.current });
 
@@ -145,6 +145,7 @@ const Main = () => {
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
         onPrint={handlePrint}
+        onLoadExample={handleLoadExample}
       />
       <CVPreview cv={cv} ref={componentRef} />
     </MainWrapper>

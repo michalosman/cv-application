@@ -13,6 +13,9 @@ export const Theme = {
     primary: "#1ba148",
     primaryHover: "#0a9037",
     primaryActive: "#098026",
+    secondary: "#c25c0e",
+    secondaryHover: "#b14b0d",
+    secondaryActive: "#a03a0c",
   },
 };
 
