@@ -16,7 +16,7 @@ const Content = ({ personalInfo, experience, education }) => {
   return (
     <ContentWrapper>
       <Section title="Description" contrastTitle>
-        {personalInfo.description}
+        <Description>{personalInfo.description}</Description>
       </Section>
       <Section title="Experience" direction="column" contrastTitle>
         {experienceItems}
@@ -31,6 +31,10 @@ const Content = ({ personalInfo, experience, education }) => {
 const ContentWrapper = styled.div`
   padding: 2rem;
   background-color: ${({ theme }) => theme.colors.light};
+`;
+
+const Description = styled.div`
+  font-style: italic;
 `;
 
 export default Content;

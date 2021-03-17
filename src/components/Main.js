@@ -130,7 +130,14 @@ const Main = () => {
     setCv(exampleCV);
   };
 
+  const handleReset = () => {
+    setCv(emptyCV);
+  };
+
   const componentRef = useRef();
+
+  //validate first
+  // throws warning because react-to-print uses findDOMNode
   const handlePrint = useReactToPrint({ content: () => componentRef.current });
 
   return (
@@ -146,6 +153,7 @@ const Main = () => {
         onDeleteEducation={handleDeleteEducation}
         onPrint={handlePrint}
         onLoadExample={handleLoadExample}
+        onReset={handleReset}
       />
       <CVPreview cv={cv} ref={componentRef} />
     </MainWrapper>

@@ -16,6 +16,9 @@ export const Theme = {
     secondary: "#c25c0e",
     secondaryHover: "#b14b0d",
     secondaryActive: "#a03a0c",
+    red: "#b3211e",
+    redHover: "#a2100d",
+    redActive: "#91000c",
   },
 };
 

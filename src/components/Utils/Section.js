@@ -24,7 +24,7 @@ const SectionWrapper = styled.section`
   flex-direction: column;
   gap: 1rem;
   padding: ${(props) => props.padding};
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
 
 const Title = styled.h3`
