@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import CVForm from "./CVForm";
-import CVResult from "./CVResult";
+import CVPreview from "./CVPreview";
 import { v4 as uuidv4 } from "uuid";
 import exampleCV from "./Utils/exampleCV";
-import emptyCV from "./Utils/emptyCV";
+// import emptyCV from "./Utils/emptyCV";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
@@ -155,7 +155,7 @@ const Main = () => {
         onDeleteEducation={handleDeleteEducation}
         onPrint={handlePrint}
       />
-      <CVResult cv={cv} />
+      <CVPreview cv={cv} />
     </MainWrapper>
   );
 };
