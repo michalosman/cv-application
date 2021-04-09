@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react";
-import styled from "styled-components";
-import { v4 as uuidv4 } from "uuid";
-import { useReactToPrint } from "react-to-print";
-import CVForm from "./CVForm";
-import CVPreview from "./CVPreview";
-import exampleCV from "./Utils/exampleCV";
-import emptyCV from "./Utils/emptyCV";
+import React, { useState, useRef } from 'react';
+import styled from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
+import { useReactToPrint } from 'react-to-print';
+import CVForm from './CVForm';
+import CVPreview from './CVPreview';
+import exampleCV from './Utils/exampleCV';
+import emptyCV from './Utils/emptyCV';
 
 const Main = () => {
   const [cv, setCv] = useState(emptyCV);
@@ -13,7 +13,7 @@ const Main = () => {
   const handleChangePersonal = (e) => {
     const { name, value, type } = e.target;
 
-    if (type === "file") {
+    if (type === 'file') {
       handleChangeFile(e);
       return;
     }
@@ -66,11 +66,11 @@ const Main = () => {
         ...prevState.experience,
         {
           id: uuidv4(),
-          position: "",
-          company: "",
-          city: "",
-          from: "",
-          to: "",
+          position: '',
+          company: '',
+          city: '',
+          from: '',
+          to: '',
         },
       ],
     }));
@@ -106,12 +106,12 @@ const Main = () => {
         ...prevState.education,
         {
           id: uuidv4(),
-          universityName: "",
-          city: "",
-          degree: "",
-          subject: "",
-          from: "",
-          to: "",
+          universityName: '',
+          city: '',
+          degree: '',
+          subject: '',
+          from: '',
+          to: '',
         },
       ],
     }));
@@ -135,8 +135,7 @@ const Main = () => {
   };
 
   const componentRef = useRef();
-
-  //validate first
+  
   // throws warning because react-to-print uses findDOMNode
   const handlePrint = useReactToPrint({ content: () => componentRef.current });
 
