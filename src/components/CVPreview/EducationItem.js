@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import Subsection from "../Utils/Subsection";
+import React from 'react'
+import styled from 'styled-components'
+import Subsection from '../Utils/Subsection'
 
 const EducationItem = ({ educationItem }) => {
   return (
@@ -17,21 +17,21 @@ const EducationItem = ({ educationItem }) => {
         </Subsection>
       </Info>
     </EducationItemWrapper>
-  );
-};
+  )
+}
 
 const EducationItemWrapper = styled.div`
   display: flex;
-`;
+`
 
 const Period = styled.div`
-  width: 20%;
+  width: 25%;
   font-weight: bold;
   margin-right: 2rem;
-`;
+`
 
 const Info = styled.div`
-  width: 75%;
-`;
+  width: 70%;
+`
 
-export default EducationItem;
+export default EducationItem
