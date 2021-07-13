@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/cv-application/static/js/main.1028e61b.chunk.js",
-    "main.js.map": "/cv-application/static/js/main.1028e61b.chunk.js.map",
+    "main.js": "/cv-application/static/js/main.3c6af270.chunk.js",
+    "main.js.map": "/cv-application/static/js/main.3c6af270.chunk.js.map",
     "runtime-main.js": "/cv-application/static/js/runtime-main.1937f864.js",
     "runtime-main.js.map": "/cv-application/static/js/runtime-main.1937f864.js.map",
     "static/js/2.275bf72a.chunk.js": "/cv-application/static/js/2.275bf72a.chunk.js",
@@ -14,6 +14,6 @@
   "entrypoints": [
     "static/js/runtime-main.1937f864.js",
     "static/js/2.275bf72a.chunk.js",
-    "static/js/main.1028e61b.chunk.js"
+    "static/js/main.3c6af270.chunk.js"
   ]
 }
