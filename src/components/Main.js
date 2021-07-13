@@ -167,10 +167,10 @@ const MainWrapper = styled.main`
   justify-content: space-between;
   gap: 4rem;
   max-width: 1800px;
-  padding: 5rem 8rem;
+  padding: 4rem 8rem;
   margin: 0 auto;
   margin-bottom: 4rem;
-  
+
   @media (max-width: 1600px) {
     flex-direction: column;
     align-items: center;
