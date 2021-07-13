@@ -1,21 +1,21 @@
-import React, { useState, useRef } from 'react';
-import styled from 'styled-components';
-import { v4 as uuidv4 } from 'uuid';
-import { useReactToPrint } from 'react-to-print';
-import CVForm from './CVForm';
-import CVPreview from './CVPreview';
-import exampleCV from './Utils/exampleCV';
-import emptyCV from './Utils/emptyCV';
+import React, { useState, useRef } from 'react'
+import styled from 'styled-components'
+import { v4 as uuidv4 } from 'uuid'
+import { useReactToPrint } from 'react-to-print'
+import CVForm from './CVForm'
+import CVPreview from './CVPreview'
+import exampleCV from './Utils/exampleCV'
+import emptyCV from './Utils/emptyCV'
 
 const Main = () => {
-  const [cv, setCv] = useState(emptyCV);
+  const [cv, setCv] = useState(emptyCV)
 
   const handleChangePersonal = (e) => {
-    const { name, value, type } = e.target;
+    const { name, value, type } = e.target
 
     if (type === 'file') {
-      handleChangeFile(e);
-      return;
+      handleChangeFile(e)
+      return
     }
 
     setCv((prevState) => ({
@@ -24,15 +24,15 @@ const Main = () => {
         ...prevState.personalInfo,
         [name]: value,
       },
-    }));
-  };
+    }))
+  }
 
   const handleChangeFile = (e) => {
-    const { name } = e.target;
-    const file = e.target.files[0];
-    if (!file) return;
+    const { name } = e.target
+    const file = e.target.files[0]
+    if (!file) return
 
-    const reader = new FileReader();
+    const reader = new FileReader()
     reader.onload = () => {
       setCv((prevState) => ({
         ...prevState,
@@ -40,24 +40,24 @@ const Main = () => {
           ...prevState.personalInfo,
           [name]: reader.result,
         },
-      }));
-    };
-    reader.readAsDataURL(file);
-  };
+      }))
+    }
+    reader.readAsDataURL(file)
+  }
 
   const handleChangeExperience = (e, id) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
 
     setCv((prevState) => {
       const newExperience = prevState.experience.map((experienceItem) => {
         if (experienceItem.id === id) {
-          return { ...experienceItem, [name]: value };
+          return { ...experienceItem, [name]: value }
         }
-        return experienceItem;
-      });
-      return { ...prevState, experience: [...newExperience] };
-    });
-  };
+        return experienceItem
+      })
+      return { ...prevState, experience: [...newExperience] }
+    })
+  }
 
   const handleAddExperience = () => {
     setCv((prevState) => ({
@@ -73,31 +73,31 @@ const Main = () => {
           to: '',
         },
       ],
-    }));
-  };
+    }))
+  }
 
   const handleDeleteExperience = (id) => {
     setCv((prevState) => {
       const newExperience = prevState.experience.filter(
         (experienceItem) => experienceItem.id !== id
-      );
-      return { ...prevState, experience: [...newExperience] };
-    });
-  };
+      )
+      return { ...prevState, experience: [...newExperience] }
+    })
+  }
 
   const handleChangeEducation = (e, id) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
 
     setCv((prevState) => {
       const newEducation = prevState.education.map((educationItem) => {
         if (educationItem.id === id) {
-          return { ...educationItem, [name]: value };
+          return { ...educationItem, [name]: value }
         }
-        return educationItem;
-      });
-      return { ...prevState, education: [...newEducation] };
-    });
-  };
+        return educationItem
+      })
+      return { ...prevState, education: [...newEducation] }
+    })
+  }
 
   const handleAddEducation = () => {
     setCv((prevState) => ({
@@ -114,30 +114,30 @@ const Main = () => {
           to: '',
         },
       ],
-    }));
-  };
+    }))
+  }
 
   const handleDeleteEducation = (id) => {
     setCv((prevState) => {
       const newEducation = prevState.education.filter(
         (educationItem) => educationItem.id !== id
-      );
-      return { ...prevState, education: [...newEducation] };
-    });
-  };
+      )
+      return { ...prevState, education: [...newEducation] }
+    })
+  }
 
   const handleLoadExample = () => {
-    setCv(exampleCV);
-  };
+    setCv(exampleCV)
+  }
 
   const handleReset = () => {
-    setCv(emptyCV);
-  };
+    setCv(emptyCV)
+  }
 
-  const componentRef = useRef();
-  
+  const componentRef = useRef()
+
   // throws warning because react-to-print uses findDOMNode
-  const handlePrint = useReactToPrint({ content: () => componentRef.current });
+  const handlePrint = useReactToPrint({ content: () => componentRef.current })
 
   return (
     <MainWrapper>
@@ -156,21 +156,22 @@ const Main = () => {
       />
       <CVPreview cv={cv} ref={componentRef} />
     </MainWrapper>
-  );
-};
+  )
+}
 
-export default Main;
+export default Main
 
 const MainWrapper = styled.main`
   display: flex;
   align-items: flex-start;
-  justify-content: center;
-  gap: 6rem;
-  padding: 5rem;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1800px;
+  padding: 5rem 8rem;
+  margin: 0 auto;
   margin-bottom: 4rem;
   @media (max-width: 1600px) {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
   }
-`;
+`

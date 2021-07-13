@@ -1,30 +1,33 @@
-import React from "react";
-import styled from "styled-components";
-import { FaFileInvoice } from "react-icons/fa";
+import React from 'react'
+import styled from 'styled-components'
 
 const Header = () => {
   return (
-    <HeaderWrapper>
-      <Logo>
-        <FaFileInvoice />
-      </Logo>
-      <h1>CV Creator</h1>
-    </HeaderWrapper>
-  );
-};
+    <HeaderContainer>
+      <HeaderWrapper>
+        <h1>CV CREATOR</h1>
+      </HeaderWrapper>
+    </HeaderContainer>
+  )
+}
 
-const HeaderWrapper = styled.header`
+const HeaderContainer = styled.div`
+  background-color: ${({ theme }) => theme.colors.dark};
+`
+
+const HeaderWrapper = styled.div`
+  font-family: 'Zen Tokyo Zoo', cursive;
   display: flex;
   align-items: center;
-  padding: 2rem;
-  background-color: ${({ theme }) => theme.colors.dark};
+  max-width: 1800px;
+  padding: 3rem 8rem;
+  margin: 0 auto;
   color: ${({ theme }) => theme.colors.light};
-`;
+  font-size: 2.2rem;
 
-const Logo = styled.div`
-  display: flex;
-  margin-right: 1rem;
-  font-size: 4rem;
-`;
+  @media (max-width: 1600px) {
+    justify-content: center;
+  }
+`
 
-export default Header;
+export default Header
