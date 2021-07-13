@@ -170,6 +170,7 @@ const MainWrapper = styled.main`
   padding: 5rem 8rem;
   margin: 0 auto;
   margin-bottom: 4rem;
+  
   @media (max-width: 1600px) {
     flex-direction: column;
     align-items: center;
